@@ -1,0 +1,31 @@
+/* Base */
+.scroll-img {
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+/* Direções */
+.scroll-left {
+  transform: translateX(-60px);
+}
+
+.scroll-right {
+  transform: translateX(60px);
+}
+
+.scroll-bottom {
+  transform: translateY(60px);
+}
+
+/* Quando entra no viewport */
+.scroll-img.show {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Imagens mantêm estilo */
+.scroll-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
