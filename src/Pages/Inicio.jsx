@@ -1,5 +1,5 @@
 import './Inicio.css'
-import me from '../assets/me.jpg'
+import me from '../assets/me.JPG'
 import ScrollElement from '../components/ScrollElement'
 import { RandomizedTextEffect } from '../components/RandomizedTextEffect'
 import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
