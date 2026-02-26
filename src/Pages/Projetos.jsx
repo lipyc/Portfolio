@@ -76,7 +76,7 @@ function Projetos() {
         {
           label: "Frontend",
           icon: "github",
-          url: "https://github.com/gilgraca/portfolio",
+          url: "https://github.com/lipyc/Portfolio",
         },
       ],
     },
