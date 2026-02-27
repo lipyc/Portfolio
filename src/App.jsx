@@ -10,6 +10,7 @@ import FluidCursor from './components/FluidCursor'
 import ShaderBackground from './components/ShaderBackground'
 import Projetos from './Pages/Projetos'
 import Contactos from './Pages/Contactos';
+import BackToTop from "./components/BackToTop";
 
 
 
@@ -44,6 +45,7 @@ function App() {
           <Contactos />
         </section>
       </main>
+      <BackToTop />
     </>
   );
 }

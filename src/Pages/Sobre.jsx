@@ -48,11 +48,11 @@ function Sobre() {
       <div className="sobre__interests">
         <h3>Interesses Pessoais</h3>
         <ul>
- <li style={{ "--i": 1 }}>📸 Fotografia</li>
-      <li style={{ "--i": 2 }}>🎨 Design Criativo</li>
-      <li style={{ "--i": 3 }}>🎵 Música</li>
-      <li style={{ "--i": 4 }}>🌍 Viagens e Cultura</li>
-      <li style={{ "--i": 5 }}>💻 Exploração de novas tecnologias</li>
+      <li style={{ "--i": 1 }}> Fotografia</li>
+      <li style={{ "--i": 2 }}>Design </li>
+      <li style={{ "--i": 3 }}> Música</li>
+      <li style={{ "--i": 4 }}>Viagens e Cultura</li>
+      <li style={{ "--i": 5 }}> Exploração de novas tecnologias</li>
         </ul>
       </div>
           </ScrollElement>
