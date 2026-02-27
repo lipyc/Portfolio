@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { FaCopy, FaCheck } from "react-icons/fa";
 import { FiMail, FiCopy, FiCheck } from "react-icons/fi";
 import ScrollElement from "../components/ScrollElement";
+import { RandomizedTextEffect } from "../components/RandomizedTextEffect";
 
 function Contactos() {
   const formRef = useRef();
@@ -43,6 +44,11 @@ function Contactos() {
 
   return (
     <section className="contactos">
+      <ScrollElement direction="up">
+        <h2 className="competencias__title">
+          <RandomizedTextEffect text="Contacte-me" />
+        </h2>
+      </ScrollElement>
       <div className="contactos__grid">
         {/* CARD EMAIL */}
 
@@ -71,14 +77,14 @@ function Contactos() {
             <input
               type="text"
               name="from_name"
-              placeholder="O teu nome"
+              placeholder="nome"
               required
             />
 
             <input
               type="email"
               name="from_email"
-              placeholder="O teu email"
+              placeholder="email"
               required
             />
             <input 
@@ -89,7 +95,7 @@ function Contactos() {
             />
             <textarea 
             name="message" 
-            placeholder="A tua mensagem" 
+            placeholder="mensagem" 
             required 
             />
             <button type="submit">
