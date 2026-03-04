@@ -4,7 +4,13 @@ import { RandomizedTextEffect } from '../components/RandomizedTextEffect'
 import academico from "../assets/academico.png";
 import portfolio from "../assets/portfolio.png";
 import pixelframe from "../assets/Pixel&Frame.png";
+import pavao from "../assets/pavao.jpg";
+import caramulo from "../assets/caramulo.jpg";
+import blueorange from "../assets/blueorange.jpg";
+import rs from "../assets/rs.png";
+import malte from "../assets/malte.png";
 import {
+  FaBehance,
   FaTimes,
   FaGithub,
   FaChevronLeft,
@@ -96,7 +102,87 @@ function Projetos() {
         },
       ],
     },
-    // Adicione mais projetos se quiser testar navegação
+    {
+      title: "Peacock",
+      description:
+        "Album de fotografias de um pavão.",
+      modalText:
+      "Este projeto é um álbum de fotografias de um pavão, onde cada fotografia é apresentada com detalhe.",
+      tech: ["Adobe Lightroom", "Adobe Photoshop"],
+      img: pavao,
+      buttons: [
+        {
+          //label: "Behance",
+          icon: "behance",
+          url: "https://www.behance.net/gallery/245182109/Peacock",
+        },
+      ],
+    },
+    {
+      title: "Caramulo 2k25",
+      description:
+        "Album de fotografias sobre o evento Caramulo Motorfestival.",
+      modalText:
+      "Este projeto é um álbum de fotografias sobre o evento Caramulo Motorfestival realizado em 2025, onde cada fotografia é apresentada com detalhe.",
+      tech: ["Adobe Lightroom", "Adobe Photoshop"],
+      img: caramulo,
+      buttons: [
+        {
+          //label: "Behance",
+          icon: "behance",
+          url: "https://www.behance.net/gallery/245183035/Caramulo2k25",
+        },
+      ],
+    },
+    {
+      title: "Blue & Orange",
+      description:
+        "Album de fotografia urbana.",
+      modalText:
+      "Este álbum foi editado seguindo a estética Teal and Orange, criando um contraste vibrante e cinematográfico entre tons frios e quentes. Cada fotografia é apresentada com detalhe, destacando a harmonia entre os elementos urbanos e a paleta de cores escolhida.",
+      tech: ["Adobe Lightroom", "Adobe Photoshop"],
+      img: blueorange,
+      buttons: [
+        {
+          //label: "Behance",
+          icon: "behance",
+          url: "https://www.behance.net/gallery/245185921/Blue-Orange",
+        },
+      ],
+    },
+    {
+      title: "RS - Logo Design",
+      description:
+        "Design de um logotipo pessoal Rodrigo Simões.",
+      modalText:
+      "Este projeto apresenta um manual de identidade sobre um design de um logotipo pessoal Rodrigo Simões, seguindo uma estética moderna e minimalista. O logotipo combina elementos abstratos num estilo urbano com uma paleta de cores harmoniosa, representando a identidade visual do proprietário.",
+      tech: ["Adobe Illustrator", "Figma"],
+      img: rs,
+      buttons: [
+        {
+          //label: "Behance",
+          icon: "behance",
+          url: "https://www.behance.net/gallery/245192491/RS-Logo-Design",
+        },
+      ],
+    },
+    {
+      title: "Malte Verde - Logo Design",
+      description:
+        "Design de um logotipo para a marca de bebidas artesanais.",
+      modalText:
+      "Este projeto apresenta um manual de identidade sobre um design de um logotipo para a marca de bebidas artesanais Malte Verde, seguindo uma estética moderna e minimalista.",
+      tech: ["Adobe Illustrator", "Adobe Indesign", "Figma"],
+      img: malte,
+      buttons: [
+        {
+          //label: "Behance",
+          icon: "behance",
+          url: "https://www.behance.net/gallery/235804835/Manual-de-identidade-Malte-Verde",
+        },
+      ],
+    },
+    // Adicionar mais projetos se quiser testar navegação
   ];
 
   const maxIndex = Math.max(0, projects.length - cardsVisible);
@@ -207,6 +293,7 @@ function Projetos() {
                         className="modal-btn"
                       >
                         {btn.icon === "github" && <FaGithub />}
+                        {btn.icon === "behance" && <FaBehance />}
                         {btn.label}
                       </a>
                     );
