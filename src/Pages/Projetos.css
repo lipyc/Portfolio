@@ -1,3 +1,48 @@
+/* FILTRO DE TECNOLOGIAS - ROW */
+.projetos__tech-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.tech-filter-label {
+  margin-bottom: 45px;
+  font-size: 1.05rem;
+  color: #fff;
+  opacity: 0.8;
+  font-weight: 500;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+/* FILTRO DE TECNOLOGIAS */
+.projetos__tech-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.tech-filter-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tech-filter-btn.active,
+.tech-filter-btn:hover {
+  background: #ff3b3b;
+  color: #fff;
+  border-color: #ff3b3b;
+}
 /* SECTION */
 .projetos {
   width: 100%;

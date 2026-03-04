@@ -22,6 +22,7 @@ function Projetos() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsVisible, setCardsVisible] = useState(3);
+  const [selectedTech, setSelectedTech] = useState(null);
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -35,6 +36,11 @@ function Projetos() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const techList = [
+    "HTML", "CSS", "JavaScript", "React", "Node.js", "PostgreSQL",
+    "Adobe Lightroom", "Adobe Photoshop", "Adobe Illustrator", "Figma", "Adobe Indesign"
+  ];
 
   const projects = [
     {
@@ -185,7 +191,12 @@ function Projetos() {
     // Adicionar mais projetos se quiser testar navegação
   ];
 
-  const maxIndex = Math.max(0, projects.length - cardsVisible);
+  // Filtragem dos projetos por tecnologia
+  const filteredProjects = selectedTech
+    ? projects.filter(p => p.tech.includes(selectedTech))
+    : projects;
+
+  const maxIndex = Math.max(0, filteredProjects.length - cardsVisible);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => Math.max(0, prev - 1));
@@ -194,9 +205,30 @@ function Projetos() {
     setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
   };
 
+  // Reset index ao mudar filtro
+  React.useEffect(() => {
+    setCurrentIndex(0);
+  }, [selectedTech, cardsVisible]);
+
   return (
     <section className="projetos" id="projetos">
       <h2 className="projetos__title"> <RandomizedTextEffect text="Projetos" /></h2>
+
+      {/* Secção de filtros por tecnologia */}
+      <div className="projetos__tech-filter-row">
+        <span className="tech-filter-label">Filtrar por:</span>
+        <div className="projetos__tech-filter">
+          {techList.map((tech) => (
+            <button
+              key={tech}
+              className={`tech-filter-btn${selectedTech === tech ? ' active' : ''}`}
+              onClick={() => setSelectedTech(selectedTech === tech ? null : tech)}
+            >
+              {tech}
+            </button>
+          ))}
+        </div>
+      </div>
 
       <div
         style={{
@@ -216,7 +248,7 @@ function Projetos() {
         </button>
 
         <div className="projetos__grid" style={{ flex: 1 }}>
-          {projects
+          {filteredProjects
             .slice(currentIndex, currentIndex + cardsVisible)
             .map((project, index) => (
               <div
