@@ -2,7 +2,7 @@ import './Inicio.css'
 import me from '../assets/me.jpg'
 import ScrollElement from '../components/ScrollElement'
 import { RandomizedTextEffect } from '../components/RandomizedTextEffect'
-import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaInstagram, FaBehance } from 'react-icons/fa'
 
 function Inicio() {
   return (
@@ -49,6 +49,13 @@ function Inicio() {
         target="_blank"
         rel="noopener noreferrer">
         <FaInstagram />
+      </a>
+      <a
+        className="orb orb-behance"
+        href="https://www.behance.net/notlipyc"
+        target="_blank"
+        rel="noopener noreferrer">
+        <FaBehance />
       </a>
       </div>
     </div>
