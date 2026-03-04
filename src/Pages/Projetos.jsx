@@ -7,7 +7,7 @@ import pixelframe from "../assets/Pixel&Frame.png";
 import pavao from "../assets/pavao.jpg";
 import caramulo from "../assets/caramulo.jpg";
 import blueorange from "../assets/blueorange.jpg";
-import rs from "../assets/rs.png";
+import rs from "../assets/rS.png";
 import malte from "../assets/malte.png";
 import {
   FaBehance,
