@@ -9,6 +9,7 @@ import caramulo from "../assets/caramulo.jpg";
 import blueorange from "../assets/blueorange.jpg";
 import rs from "../assets/rS.png";
 import malte from "../assets/malte.png";
+import a_galhofa from "../assets/a_galhofa.png";
 import {
   FaBehance,
   FaTimes,
@@ -188,6 +189,23 @@ function Projetos() {
         },
       ],
     },
+     {
+      title: "A galhofa - Manual de identidade",
+      description:
+        "Design de um manual de identidade para a marca A galhofa.",
+      modalText:
+      "Este projeto apresenta um manual de identidade para a marca A galhofa, seguindo uma estética moderna e minimalista. O manual inclui o logotipo, cores, tipografia e diretrizes de uso.",
+      tech: ["Adobe Illustrator", "Affinity Designer"],
+      img: a_galhofa,
+      buttons: [
+        {
+          //label: "Behance",
+          icon: "behance",
+          url: "https://www.behance.net/gallery/258577433/A-galhofa",
+        },
+      ],
+    },
+   
     // Adicionar mais projetos se quiser testar navegação
   ];
 
